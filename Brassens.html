@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brassens</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Навигационное меню -->
+    <header class="primary-header flex">
+      <div>
+        <img class="logo" src="brassens2logoPNG.png" alt="Brassens-icon" />
+      </div>
+      <!-- Кнопка свернуть/развернуть вкладки меню на телефоне-->
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only"></span>
+      </button>
+
+      <nav>
+        <ul id="primary-navigation" class="primary-navigation flex">
+          <li class="active">
+            <a href="#"> <span aria-hidden="true">00 </span>История </a>
+          </li>
+          <li>
+            <a href="#"> <span aria-hidden="true">00 </span> Коллектив </a>
+          </li>
+          <li>
+            <a href="#">
+              <span aria-hidden="true">00 </span> Вступить в коллектив
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
