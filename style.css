@@ -54,6 +54,12 @@ body {
 
     flex-direction: column;
     padding: min(30vh, 12rem) 2em;
+
+    transform: translateX(100%);
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
   }
   .mobile-nav-toggle {
     display: block;
@@ -65,10 +71,15 @@ body {
 
     width: 2rem;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 3.5rem;
     right: 2rem;
 
     border: 0;
     border-radius: 0.5em;
   }
+}
+
+/* настройки для body */
+body {
+  overflow-x: hidden;
 }
