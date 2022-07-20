@@ -119,6 +119,7 @@ body::-webkit-scrollbar {
 
 .container {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
   margin-top: 50px;
@@ -129,7 +130,7 @@ body::-webkit-scrollbar {
   display: grid;
   text-align: justify;
   background-color: rgb(183, 156, 208);
-  padding: 15px;
+  padding: 1em;
   border-radius: 1em;
 }
 
@@ -145,7 +146,7 @@ body::-webkit-scrollbar {
   background-color: rgb(183, 156, 208);
   border-radius: 1em;
   text-align: justify;
-  padding: 15px;
+  padding: 1em;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -177,6 +178,6 @@ footer {
   background-color: rgb(178, 205, 238);
 
   border-radius: 1rem;
-  padding-top: 15px;
+  padding-top: 1em;
   margin-bottom: 10px;
 }
