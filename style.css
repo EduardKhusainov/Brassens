@@ -1,11 +1,10 @@
-body {
-  background-color: rgb(218, 187, 187);
-}
 /* Навигационное меню */
 .logo {
   margin: 1rem;
   padding-top: 0.1rem;
+  border-radius: 1em;
 }
+
 .primary-header {
   align-items: center;
   justify-content: space-between;
@@ -18,7 +17,7 @@ body {
 /* Главная */
 .flex {
   display: flex;
-  gap: var(--gap, 1rem);
+  gap: var(--gap, 3rem);
 }
 
 .primary-navigation {
@@ -26,24 +25,33 @@ body {
   padding: 0;
   margin: 0;
 
-  background: hsl(0 0% 0% /0.5);
+  text-align: right;
+
+  background: rgba(227, 211, 211, 0.5);
 }
 
 @supports (backdrop-filter: blur(0.1rem)) {
   .primary-navigation {
-    background: rgba(227, 218, 115, 0.27);
+    background: rgba(178, 205, 238, 0.772);
     backdrop-filter: blur(0.1rem);
   }
 }
 
 .primary-navigation a {
   text-decoration: none;
-  color: aliceblue;
+  color: rgb(30, 38, 44);
+  font-size: 20px;
+  padding: 5px;
+}
+
+.primary-navigation a:hover {
+  background-color: rgb(178, 143, 211);
+  border-radius: 0.5rem;
+  padding: 5px;
 }
 
 .primary-navigation a > [aria-hidden="true"] {
   font-weight: 700;
-  margin-inline-end: 0.75em;
 }
 
 @media (max-width: 35em) {
@@ -65,7 +73,7 @@ body {
   }
   .mobile-nav-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     background: url(button.png);
     background-position: center center;
@@ -91,10 +99,84 @@ body {
   .primary-navigation {
     padding-block: 1.51rem;
     padding-inline: clamp(3rem, 5vw, 10rem);
+    border-radius: 1em;
   }
 }
 
 /* настройки для body */
 body {
   overflow-x: hidden;
+  margin-bottom: 0;
+  background-color: rgb(237, 230, 230);
+}
+
+body::-webkit-scrollbar {
+  text-align: center;
+  width: 100%;
+}
+
+/* сетка из трех колонок */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+[class^="box-"] {
+  display: grid;
+  text-align: justify;
+  background-color: rgb(183, 156, 208);
+  padding: 15px;
+  border-radius: 1em;
+}
+
+.afisha {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*нижний ряд */
+.row {
+  grid-template-rows: auto-fit;
+  background-color: rgb(183, 156, 208);
+  border-radius: 1em;
+  text-align: justify;
+  padding: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row p {
+  display: block;
+  width: 240px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row p:hover {
+  border-radius: 1em;
+  background-color: rgb(178, 143, 211);
+}
+
+.cont:link {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+footer {
+  width: auto;
+  height: 30px;
+
+  text-align: center;
+  align-items: center;
+  background-color: rgb(178, 205, 238);
+
+  border-radius: 1rem;
+  padding-top: 15px;
+  margin-bottom: 10px;
 }
