@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  
+    <link rel="stylesheet" href="style.css" />
+    <script src="nav.js" defer></script>
+  </head>
+  <body class="home">
+    <!-- Навигационное меню -->
+    <header class="primary-header flex">
+      <div>
+       <a href="Brassens.html"> <img class="logo" src="logo.png" alt="Brassens-icon" />
+      </div></a>
+
+      <!-- Кнопка свернуть/развернуть вкладки меню на телефоне-->
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only"></span>
+      </button>
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li class="active">
+            <a href="#"> <span aria-hidden="true"></span>История </a>
+          </li>
+          <li>
+            <a href="galery.html"> <span aria-hidden="true"></span> Коллектив </a>
+          </li>
+          <li>
+            <a href="#">
+              <span aria-hidden="true"></span> Вступить в коллектив
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+   
+    <section class="gallery">
+      <h2 class="title">Галерея</h2>
+      <h3>Год события 2020</h3>
+      <div class="gallery-list">
+        <a href="01-(1).jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="01-(1).png" alt="alt">
+        </a>
+        <a href="liberty.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="liberty.jpg" alt="alt">
+        </a>
+        <a href="lighthouse.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="lighthouse.jpg" alt="alt">
+        </a>
+        <a href="minimalismo.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="minimalismo.jpg" alt="alt">
+        </a>
+        <a href="salad.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="salad.jpg" alt="alt">
+        </a>
+        <a href="shutterbug.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="shutterbug.jpg" alt="alt">
+        </a>
+        <a href="skaterboy.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="skaterboy.jpg" alt="alt">
+        </a>
+        <a href="woodcraft.jpg" class="gallery-item">
+          <div class="gallery-item-hover">2020</div>
+          <img src="woodcraft.jpg" alt="alt">
+        </a>
+      </div>
+    </section>
+  
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+      $(".gallery-list").magnificPopup({
+        delegate: "a",
+        type: "image",
+        gallery: {
+          enabled: true
+        }
+      });
+    </script>
+  
+      
+    </div> 
+</body>
+</html>
