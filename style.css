@@ -211,6 +211,7 @@ body {
   color: #ff7a18;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
 .row:focus-within {
   outline: 5px solid rgb(255, 220, 78);
 }
@@ -318,19 +319,23 @@ h3:after {
   transition: opacity 0.5s ease;
   z-index: 2;
 }
+
 .gallery-item:hover .gallery-item-hover {
   opacity: 1;
 }
+
 .gallery-item:hover img,
 .gallery-item:focus img {
   transform: scale(1.3);
 }
+
 .gallery-item img {
   max-width: 100%;
   height: auto;
   transition: all 0.5s ease;
   border-radius: 1rem;
 }
+
 @media (max-width: 991px) {
   .gallery-item {
     flex: 33.3%;
