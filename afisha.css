@@ -10,7 +10,36 @@ body {
   background-color: rgb(43, 43, 43);
 }
 
-/*Стили для блока горизонтального скролл-блока с карточками мини-афиш*/
+/*верхний блок новостей*/
+.afisha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 2em;
+  gap: 1rem;
+  padding: 1rem;
+
+  background: linear-gradient(85deg, #434343, #262626);
+  border-radius: 1rem;
+
+  justify-items: stretch;
+}
+
+.afisha p {
+  display: block;
+  max-width: 100%;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/*Стили для блока горизонтального скролл-блока 
+с карточками мини-афиш*/
 .wrapper {
   display: flex;
   position: absolute;
@@ -23,6 +52,7 @@ body {
   overflow-x: auto;
 }
 
+/*стилизуем скролл-бар*/
 .wrapper::-webkit-scrollbar {
   height: 1rem;
   border-radius: 0.5rem;
@@ -34,8 +64,18 @@ body {
 }
 
 .wrapper::-webkit-scrollbar-thumb {
-  background-color: #4e7ad9;
+  background-color: rgb(255, 220, 78);
   border-radius: 0.5rem;
+}
+
+/*скрываем скролл-бар для мобильных версий*/
+@media screen and (max-width: 500px) {
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .link-map {
@@ -116,7 +156,7 @@ body {
   outline: none;
   min-width: 240px;
 }
-
+/*статичная карточка*/
 @media (max-width: 1200px) {
   .map {
     width: 150px;
@@ -124,11 +164,13 @@ body {
     margin-left: 1rem;
   }
 }
+
 @media (max-width: 1200px) {
   .h2-map {
     font-size: 32px;
   }
 }
+/*карточки с трансформацией*/
 @media (max-width: 1200px) {
   [class^="map-"] {
     min-width: 240px;
@@ -144,7 +186,7 @@ body {
 
 @media (max-width: 1200px) {
   [class^="map-"]:nth-child(n + 3) {
-    margin-left: -7em;
+    margin-left: -5em;
   }
 }
 
@@ -161,31 +203,5 @@ body {
   width: 300px;
   height: 350px;
   border-radius: 1rem;
-}
-/*верхний блок новостей*/
-.afisha {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  margin-top: 2em;
-  gap: 1rem;
-  padding: 1rem;
-
-  background: linear-gradient(85deg, #434343, #262626);
-  border-radius: 1rem;
-
-  justify-items: stretch;
-}
-
-.afisha p {
-  display: block;
-  max-width: 100%;
-  margin-top: 0px;
-  text-align: justify;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 1rem;
+  object-fit: fill;
 }
