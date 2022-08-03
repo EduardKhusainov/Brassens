@@ -1,0 +1,191 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font: 16px;
+  background-color: rgb(43, 43, 43);
+}
+
+/*Стили для блока горизонтального скролл-блока с карточками мини-афиш*/
+.wrapper {
+  display: flex;
+  position: absolute;
+  flex-wrap: nowrap;
+  height: 600px;
+  width: 100%;
+  margin-top: 1rem;
+  background: linear-gradient(85deg, #434343, #262626);
+  border-radius: 1em;
+  overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background-color: #434343;
+  border-radius: 0.5rem;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #4e7ad9;
+  border-radius: 0.5rem;
+}
+
+.link-map {
+  outline: none;
+  text-decoration: none;
+  color: #4e7ad9;
+}
+.h3-map {
+  text-align: start;
+}
+
+.h3-map:hover,
+.link-map:focus {
+  color: #ff7a18;
+}
+/*статичная карточка*/
+.map {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-width: 240px;
+  min-height: 280px;
+  padding: 1em;
+  margin: 3em 7rem 1rem 1rem;
+  border-radius: 1rem;
+
+  background: black;
+  box-shadow: -3rem 0 3rem -2rem #000;
+}
+
+.h2-map {
+  display: block;
+  font-size: 50px;
+  margin-top: 10rem;
+}
+
+/*карточки с трансформацией*/
+[class^="map-"] {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-width: 240px;
+  min-height: 280px;
+  padding: 1em;
+  margin: 3em 4rem 1rem;
+  border-radius: 1rem;
+
+  color: white;
+  text-align: left;
+  text-justify: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+
+  background: linear-gradient(85deg, #434343, #272626);
+  box-shadow: -3rem 0 3rem -2rem #000;
+}
+
+[class^="map-"]:nth-child(n + 1) {
+  margin-left: -5em;
+}
+
+[class^="map-"]:hover,
+[class^="map-"]:focus-within {
+  min-width: 240px;
+  min-height: 280px;
+
+  color: rgb(255, 220, 78);
+
+  background: linear-gradient(85deg, #434343, #262626);
+  outline: 5px solid rgb(255, 220, 78);
+  transform: translate(-4em, -1em);
+}
+
+[class^="map-"]:last-child:hover,
+[class^="map-"]:last-child:focus {
+  border: 5px solid rgb(255, 220, 78);
+  outline: none;
+  min-width: 240px;
+}
+
+@media (max-width: 1200px) {
+  .map {
+    width: 150px;
+    min-height: 280px;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .h2-map {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1200px) {
+  [class^="map-"] {
+    min-width: 240px;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-1.map {
+    margin-left: -12em;
+  }
+}
+
+@media (max-width: 1200px) {
+  [class^="map-"]:nth-child(n + 3) {
+    margin-left: -7em;
+  }
+}
+
+.b-img {
+  display: grid;
+  width: 240px;
+  height: 300px;
+
+  overflow: visible;
+}
+
+.img-map {
+  display: block;
+  width: 300px;
+  height: 350px;
+  border-radius: 1rem;
+}
+/*верхний блок новостей*/
+.afisha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 2em;
+  gap: 1rem;
+  padding: 1rem;
+
+  background: linear-gradient(85deg, #434343, #262626);
+  border-radius: 1rem;
+
+  justify-items: stretch;
+}
+
+.afisha p {
+  display: block;
+  max-width: 100%;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
